@@ -302,7 +302,6 @@ if (wowtocversion > 90000) then Mixin(self, BackdropTemplateMixin) end
 -- item
 function LinkTypeFuncs:item(link,linkType,id)
 	local _, _, itemRarity, itemLevel, _, _, _, itemStackCount, _, itemTexture = GetItemInfo(link);
-	if LibItemString:GetTrueItemLevel(link) then itemLevel = LibItemString:GetTrueItemLevel(link); end
 
 	-- Icon
 	if (self.SetIconTextureAndText) and (not cfg.if_smartIcons or SmartIconEvaluation(self,linkType)) then
